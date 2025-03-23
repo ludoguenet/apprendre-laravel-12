@@ -1,75 +1,55 @@
-# Nuxt Minimal Starter
+# Tutoriels Laravel 12 par Laravel Jutsu
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+![Laravel Jutsu](https://laraveljutsu.net/img/logo.svg)
 
-## Setup
+Plateforme de tutoriels vidéo pour apprendre Laravel 12 en français, développée par Laravel Jutsu.
 
-Make sure to install dependencies:
+## À propos
+
+Cette application Nuxt.js propose une collection complète de tutoriels vidéo pour maîtriser Laravel 12. Chaque tutoriel est accompagné de code source et d'explications détaillées, adaptés à tous les niveaux de développeurs.
+
+## Fonctionnalités principales
+
+- **Tutoriels vidéo structurés** pour une progression logique
+- **Recherche par titre, contenu et tags**
+- **Interface moderne et responsive**
+- **Métadonnées optimisées pour le SEO**
+- **Indicateurs de difficulté** pour chaque tutoriel
+- **Expérience utilisateur fluide** avec transitions et animations
+
+## Prérequis techniques
+
+- Node.js 18+
+- NPM ou Yarn
+- Navigateur moderne (Chrome, Firefox, Safari, Edge)
+
+## Démarrage rapide
 
 ```bash
-# npm
+# Installation des dépendances
 npm install
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+# Lancement en développement
 npm run dev
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
+# Construction pour production
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
+## Technologies
 
-```bash
-# npm
-npm run preview
+- Nuxt 3
+- Vue 3 avec TypeScript
+- Nuxt UI
+- Nuxt Content
+- Tailwind CSS
 
-# pnpm
-pnpm preview
+## Contact
 
-# yarn
-yarn preview
+Pour toute question technique ou commerciale:
 
-# bun
-bun run preview
-```
+- Site: [laraveljutsu.net](https://laraveljutsu.net)
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+---
+
+© 2025 Laravel Jutsu. Tous droits réservés.
