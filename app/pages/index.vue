@@ -131,10 +131,10 @@ useSeoMeta({
   description: 'Découvrez des tutoriels complets sur Laravel 12, avec des explications détaillées, du code source et des exemples pratiques pour maîtriser ce framework PHP.',
   ogTitle: 'Tutoriels Laravel 12 - Apprenez le framework PHP moderne',
   ogDescription: 'Ressources complètes pour apprendre Laravel 12: vidéos, code source et explications détaillées.',
-  ogImage: '/images/laravel-12-tutorials-og.jpg',
+  ogImage: '/images/home.jpg',
   twitterCard: 'summary_large_image',
   twitterTitle: 'Tutoriels Laravel 12 - Formation Complète',
   twitterDescription: 'Ressources complètes pour apprendre Laravel 12: vidéos, code source et explications détaillées.',
-  twitterImage: '/images/laravel-12-tutorials-og.jpg',
+  twitterImage: '/images/home.jpg',
 })
 </script>
