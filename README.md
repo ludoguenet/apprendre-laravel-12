@@ -1,6 +1,6 @@
 # Tutoriels Laravel 12 par Laravel Jutsu
 
-![Laravel Jutsu](https://laraveljutsu.net/img/logo.svg)
+<img src="https://laraveljutsu.net/img/logo.svg" alt="drawing" style="width:200px;"/>
 
 Plateforme de tutoriels vidéo pour apprendre Laravel 12 en français, développée par Laravel Jutsu.
 
