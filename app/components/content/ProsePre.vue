@@ -1,9 +1,9 @@
 <template>
-  <pre
-    :class="$props.class"
-    class="my-4 bg-zinc-700 rounded-md p-5 overflow-x-scroll"
-  ><slot /></pre>
-</template>
+    <pre
+      :class="$props.class"
+      class="my-4 bg-zinc-800 rounded-lg p-5 overflow-x-auto text-zinc-100 shadow-md"
+    ><slot /></pre>
+  </template>
 
 <script setup lang="ts">
 defineProps({

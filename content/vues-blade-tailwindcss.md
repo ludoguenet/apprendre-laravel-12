@@ -10,6 +10,9 @@ repository: "https://github.com/ludoguenet/l12/tree/feat/blade-layouts"
 thumbnail: "/images/vues-blade-tailwindcss.png"
 level: "intermédiaire"
 isNew: true
+tags:
+    - blade
+    - css
 links:
   - name: Documentation Laravel
     icon: 📜
@@ -32,10 +35,10 @@ Dans cette vidéo, nous allons découvrir **Blade**, le puissant moteur de templ
 
 ## 📌 Au programme :
 
-✅ Découverte du moteur de template Blade
-✅ Création de layouts réutilisables
-✅ Introduction aux composants Blade
-✅ Stylisation avec Tailwind CSS
+- ✅ Découverte du moteur de template Blade
+- ✅ Création de layouts réutilisables
+- ✅ Introduction aux composants Blade
+- ✅ Stylisation avec Tailwind CSS
 
 ## Rappel de la situation
 

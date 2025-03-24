@@ -10,6 +10,8 @@ repository: "https://github.com/ludoguenet/l12/tree/feat/introduction"
 thumbnail: "/images/premiers-pas-structure-laravel-12.png"
 level: "débutant"
 isNew: true
+tags:
+    - php
 links:
   - name: Documentation Laravel
     icon: 📜

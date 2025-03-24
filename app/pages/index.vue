@@ -69,7 +69,7 @@
       >
         <UButton
           icon="i-lucide-rotate-ccw"
-          color="gray"
+          color="primary"
           variant="soft"
           @click="searchQuery = ''"
         >
@@ -81,7 +81,7 @@
     <UAlert
       v-else
       title="Aucun tutoriel disponible"
-      color="amber"
+      color="warning"
       class="mt-8"
       icon="i-lucide-alert-triangle"
     >

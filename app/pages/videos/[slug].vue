@@ -55,7 +55,7 @@
           <!-- Social Share Buttons -->
           <div class="flex space-x-2 mb-6">
             <UButton
-              color="gray"
+              color="secondary"
               variant="soft"
               size="sm"
               icon="i-lucide-twitter"
@@ -66,7 +66,7 @@
               Partager
             </UButton>
             <UButton
-              color="gray"
+              color="secondary"
               variant="soft"
               size="sm"
               icon="i-mdi-linkedin"
@@ -86,7 +86,7 @@
           class="mt-6"
         >
           <template #description>
-            <div class="prose prose-lg max-w-none pt-4 dark:prose-invert">
+            <div class="max-w-none pt-4">
               <ContentRenderer :value="video" />
             </div>
           </template>

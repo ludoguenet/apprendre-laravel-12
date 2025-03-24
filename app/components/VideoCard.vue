@@ -32,7 +32,7 @@
             Nouveau
           </div>
           <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/40 transition-opacity duration-300">
-            <div class="size-10 bg-lime-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+            <div class="size-10 bg-lime-500 opacity-90 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
               <UIcon
                 name="i-lucide-play"
                 size="lg"
@@ -57,7 +57,7 @@
               :key="tag"
               variant="soft"
               size="xs"
-              color="gray"
+              color="neutral"
               class="group-hover:bg-gray-200 transition-colors duration-300"
             >
               {{ tag }}
