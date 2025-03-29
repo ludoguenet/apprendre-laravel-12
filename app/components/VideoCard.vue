@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    :to="`/videos/${video.meta.slug}`"
+    :to="`/videos/${video.slug}`"
     class="group"
   >
     <UCard
@@ -13,7 +13,7 @@
       <div class="flex flex-col h-full">
         <div class="aspect-video bg-gray-100 relative overflow-hidden">
           <img
-            :src="video.meta.thumbnail"
+            :src="video.thumbnail"
             :alt="video.title"
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             loading="lazy"
@@ -23,10 +23,10 @@
               name="i-lucide-clock"
               size="xs"
             />
-            <span>{{ video.meta.duration || '00:00' }}</span>
+            <span>{{ video.duration || '00:00' }}</span>
           </div>
           <div
-            v-if="video.meta.isNew"
+            v-if="video.isNew"
             class="absolute top-3 left-3 bg-lime-500 text-white text-xs px-2 py-1 rounded-md"
           >
             Nouveau
@@ -53,7 +53,7 @@
 
           <div class="flex flex-wrap gap-2 mt-auto">
             <UBadge
-              v-for="tag in video.meta.tags"
+              v-for="tag in video.tags"
               :key="tag"
               variant="soft"
               size="xs"
@@ -70,17 +70,17 @@
                 name="i-lucide-calendar"
                 size="xs"
               />
-              {{ formatDate(video.meta.date) }}
+              {{ formatDate(video.date) }}
             </p>
             <p
               class="text-xs text-gray-500 flex items-center gap-1"
             >
               <UBadge
-                v-if="video.meta.level"
+                v-if="video.level"
                 size="sm"
                 :color="difficultyColor"
               >
-                {{ video.meta.level }}
+                {{ video.level }}
               </UBadge>
             </p>
           </div>
@@ -109,7 +109,7 @@ function formatDate(dateString: string): string {
 }
 
 const difficultyColor = computed(() => {
-  switch (props.video.meta.level) {
+  switch (props.video.level) {
     case 'débutant': return 'primary'
     case 'intermédiaire': return 'secondary'
     case 'avancé': return 'warning'

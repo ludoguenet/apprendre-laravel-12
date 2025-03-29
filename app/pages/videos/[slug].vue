@@ -15,7 +15,7 @@
         <!-- Video Player with aspect ratio wrapper -->
         <div class="relative overflow-hidden rounded-xl shadow-lg bg-gray-900">
           <VideoPlayer
-            :youtube-id="video.meta.youtubeId"
+            :youtube-id="video.youtubeId"
             class="w-full"
           />
         </div>
@@ -31,24 +31,24 @@
                 name="i-lucide-calendar-days"
                 class="mr-1.5"
               />
-              <span>{{ formatDate(video.meta.date) }}</span>
+              <span>{{ formatDate(video.date) }}</span>
             </div>
             <div class="flex items-center">
               <UIcon
                 name="i-lucide-clock-fading"
                 class="mr-1.5"
               />
-              <span>{{ video.meta.duration }}</span>
+              <span>{{ video.duration }}</span>
             </div>
             <div
-              v-if="video.meta.level"
+              v-if="video.level"
               class="flex items-center"
             >
               <UIcon
                 name="i-lucide-graduation-cap"
                 class="mr-1.5"
               />
-              <span>{{ video.meta.level }}</span>
+              <span>{{ video.level }}</span>
             </div>
           </div>
 
@@ -94,11 +94,11 @@
           <template #links>
             <div class="pt-4">
               <div
-                v-if="video.meta.links && video.meta.links.length > 0"
+                v-if="video.links && video.links.length > 0"
                 class="space-y-4"
               >
                 <UCard
-                  v-for="link in video.meta.links"
+                  v-for="link in video.links"
                   :key="link.url"
                   class="border-l-4 border-l-lime-200"
                   :ui="{ body: { padding: 'p-4' } }"
@@ -152,8 +152,8 @@
           <div class="space-y-3">
             <a
               v-for="(relatedVideo, index) in relatedVideos"
-              :key="relatedVideo.meta.order || index"
-              :href="`/videos/${relatedVideo.meta.slug}`"
+              :key="relatedVideo.order || index"
+              :href="`/videos/${relatedVideo.slug}`"
               class="block transition-all duration-200"
             >
               <UCard
@@ -164,7 +164,7 @@
                 }"
                 :to="`/videos${relatedVideo._path}`"
                 :class="[
-                  relatedVideo.meta.slug === slug
+                  relatedVideo.slug === slug
                     ? 'bg-primary-50 border-primary dark:bg-primary-900/20 dark:border-primary-500'
                     : 'hover:bg-gray-50 dark:hover:bg-gray-800/50',
                 ]"
@@ -172,38 +172,38 @@
                 <div class="flex gap-3">
                   <div class="flex-shrink-0 w-24 h-16 relative rounded-lg overflow-hidden">
                     <img
-                      :src="relatedVideo.meta.thumbnail"
+                      :src="relatedVideo.thumbnail"
                       :alt="relatedVideo.title"
                       class="w-full h-full object-cover"
                       loading="lazy"
                     >
                     <div
                       class="absolute inset-0 flex items-center justify-center"
-                      :class="relatedVideo.meta.slug === slug ? 'bg-primary/60' : 'bg-black/30'"
+                      :class="relatedVideo.slug === slug ? 'bg-primary/60' : 'bg-black/30'"
                     >
                       <UIcon
-                        :name="relatedVideo.meta.slug === slug ? 'i-lucide-circle-play' : 'i-lucide-play'"
+                        :name="relatedVideo.slug === slug ? 'i-lucide-circle-play' : 'i-lucide-play'"
                         class="text-white text-lg"
                       />
                     </div>
                     <div
-                      v-if="relatedVideo.meta.order"
+                      v-if="relatedVideo.order"
                       class="absolute top-1 left-1 bg-black/70 text-white text-xs rounded px-1.5 py-0.5"
                     >
-                      {{ relatedVideo.meta.order }}
+                      {{ relatedVideo.order }}
                     </div>
                   </div>
                   <div class="flex-1 min-w-0">
                     <p
                       class="font-medium text-sm line-clamp-2"
-                      :class="relatedVideo.meta.slug === slug ? 'text-primary-700 dark:text-primary-400' : ''"
+                      :class="relatedVideo.slug === slug ? 'text-primary-700 dark:text-primary-400' : ''"
                     >
                       {{ relatedVideo.title }}
                     </p>
                     <div class="flex items-center text-xs text-gray-500 mt-1.5 space-x-2">
-                      <span>{{ relatedVideo.meta.duration || '00:00' }}</span>
+                      <span>{{ relatedVideo.duration || '00:00' }}</span>
                       <span
-                        v-if="isWatched(relatedVideo.meta.slug)"
+                        v-if="isWatched(relatedVideo.slug)"
                         class="flex items-center text-green-600"
                       >
                         <UIcon
@@ -261,13 +261,13 @@
         >
           <div class="aspect-video rounded-t-lg overflow-hidden relative">
             <img
-              :src="rec.meta.thumbnail"
+              :src="rec.thumbnail"
               :alt="rec.title"
               class="w-full h-full object-cover"
               loading="lazy"
             >
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
-              <span class="text-white font-medium">{{ rec.meta.duration || '00:00' }}</span>
+              <span class="text-white font-medium">{{ rec.duration || '00:00' }}</span>
             </div>
           </div>
           <div class="p-4">
@@ -291,7 +291,7 @@ const slug = route.params.slug
 
 const video = await queryCollection('content').path('/' + slug).first()
 
-const relatedVideos = await queryCollection('content').all()
+const relatedVideos = await queryCollection('content').order('order', 'ASC').all()
 
 const items = [
   { label: 'Description', icon: 'i-lucide-book-open-text', slot: 'description' },
@@ -335,7 +335,7 @@ useSeoMeta({
   description: video.description,
   ogTitle: video.title,
   ogDescription: video.description,
-  ogImage: video.meta.thumbnail,
+  ogImage: video.thumbnail,
   ogType: 'video.episode',
   twitterCard: 'summary_large_image',
   articlePublishedTime: video.date,

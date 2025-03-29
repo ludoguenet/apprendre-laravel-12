@@ -8,7 +8,7 @@ duration: "28:42"
 youtubeId: "GRKIX8SZ7KQ"
 repository: "https://github.com/ludoguenet/l12/tree/feat/blade-layouts"
 thumbnail: "/images/vues-blade-tailwindcss.png"
-level: "intermédiaire"
+level: "débutant"
 isNew: true
 tags:
     - blade

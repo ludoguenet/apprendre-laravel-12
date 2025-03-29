@@ -113,7 +113,7 @@
 <script setup lang="ts">
 const searchQuery = ref('')
 
-const { data: videos } = await useAsyncData(() => queryCollection('content').all())
+const { data: videos } = await useAsyncData(() => queryCollection('content').order('order', 'ASC').all())
 
 const filteredVideos = computed(() => {
   if (!searchQuery.value) return videos.value
@@ -122,7 +122,7 @@ const filteredVideos = computed(() => {
   return videos.value.filter(video =>
     video.title?.toLowerCase().includes(query)
     || video.description?.toLowerCase().includes(query)
-    || video.meta?.tags?.some((tag: string) => tag.toLowerCase().includes(query)),
+    || video.tags?.some((tag: string) => tag.toLowerCase().includes(query)),
   )
 })
 
