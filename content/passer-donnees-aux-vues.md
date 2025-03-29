@@ -6,7 +6,7 @@ description: "Apprenez à passer des données de web.php aux vues dans Laravel 1
 date: "2025-03-29"
 duration: "21:32"
 youtubeId: "nM3OVVHwJnQ"
-repository: "https://github.com/ludoguenet/l12/tree/feat/passer-donnees"
+repository: "https://github.com/ludoguenet/l12/tree/feat/pass-data-to-views"
 thumbnail: "/images/passer-donnes-aux-vues.png"
 level: "débutant"
 isNew: true
@@ -19,7 +19,7 @@ links:
     url: https://laravel.com/docs/12.x/routing
   - name: Code source
     icon: 📎
-    url: https://github.com/ludoguenet/l12/tree/feat/passer-donnees
+    url: https://github.com/ludoguenet/l12/tree/feat/pass-data-to-views
   - name: Rejoignez la communauté
     icon: 🤝
     url: https://discord.gg/invite/cuFxTjH
