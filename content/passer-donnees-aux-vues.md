@@ -1,5 +1,5 @@
 ---
-title: "Passer des données de web.php aux vues avec Laravel 12"
+title: "Passer des données aux vues"
 order: 3
 slug: passer-donnees-aux-vues
 description: "Apprenez à passer des données de web.php aux vues dans Laravel 12 en utilisant compact() et Arr::get() pour structurer votre application."
