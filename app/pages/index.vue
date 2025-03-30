@@ -55,7 +55,7 @@
             name="i-lucide-video"
             class="text-lime-500"
           />
-          <span>{{ videos.length }} tutoriels Laravel 12 disponibles</span>
+          <span>{{ videos.length }} tutoriels disponibles</span>
         </div>
       </div>
 
