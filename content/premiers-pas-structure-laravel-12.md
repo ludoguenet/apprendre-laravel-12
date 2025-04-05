@@ -9,7 +9,7 @@ youtubeId: "xzoSH_7QF3E"
 repository: "https://github.com/ludoguenet/l12/tree/feat/introduction"
 thumbnail: "/images/premiers-pas-structure-laravel-12.png"
 level: "débutant"
-isNew: true
+isNew: false
 tags:
     - php
 links:

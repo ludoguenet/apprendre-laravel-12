@@ -9,7 +9,7 @@ youtubeId: "GRKIX8SZ7KQ"
 repository: "https://github.com/ludoguenet/l12/tree/feat/blade-layouts"
 thumbnail: "/images/vues-blade-tailwindcss.png"
 level: "débutant"
-isNew: true
+isNew: false
 tags:
     - blade
     - css

@@ -9,7 +9,7 @@ youtubeId: "nM3OVVHwJnQ"
 repository: "https://github.com/ludoguenet/l12/tree/feat/pass-data-to-views"
 thumbnail: "/images/passer-donnes-aux-vues.png"
 level: "débutant"
-isNew: true
+isNew: false
 tags:
     - routes
     - blade

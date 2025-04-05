@@ -243,44 +243,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Related Content Section -->
-    <section
-      v-if="recommendedVideos && recommendedVideos.length > 0"
-      class="mt-12 pt-8 border-t"
-    >
-      <h2 class="text-2xl font-bold mb-6">
-        D'autres tutoriels qui pourraient vous intéresser
-      </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <UCard
-          v-for="rec in recommendedVideos.slice(0, 3)"
-          :key="rec._path"
-          class="hover:shadow-lg transition-all duration-200"
-          :to="`/videos${rec._path}`"
-        >
-          <div class="aspect-video rounded-t-lg overflow-hidden relative">
-            <img
-              :src="rec.thumbnail"
-              :alt="rec.title"
-              class="w-full h-full object-cover"
-              loading="lazy"
-            >
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
-              <span class="text-white font-medium">{{ rec.duration || '00:00' }}</span>
-            </div>
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold mb-2 line-clamp-2">
-              {{ rec.title }}
-            </h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
-              {{ rec.description }}
-            </p>
-          </div>
-        </UCard>
-      </div>
-    </section>
   </section>
 </template>
 
