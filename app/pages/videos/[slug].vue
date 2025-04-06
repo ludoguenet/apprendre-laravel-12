@@ -84,6 +84,7 @@
           :items="items"
           color="primary"
           class="mt-6"
+          :unmount-on-hide="false"
         >
           <template #description>
             <div class="max-w-none pt-4">
