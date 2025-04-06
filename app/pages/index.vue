@@ -67,7 +67,7 @@
         />
       </div>
 
-      <UDivider v-if="filteredVideos.length !== videos.length" />
+      <USeparator v-if="filteredVideos.length !== videos.length" />
 
       <div
         v-if="filteredVideos.length !== videos.length"
