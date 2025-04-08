@@ -4,7 +4,7 @@ export default defineEventHandler(async (event) => {
   // Fetch all contents
   const docs = await queryCollection(event, 'content').order('order', 'ASC').all()
   const sitemap = new SitemapStream({
-    hostname: 'http://apprendre-laravel-12.net',
+    hostname: 'https://apprendre-laravel-12.net',
   })
 
   for (const doc of docs) {
