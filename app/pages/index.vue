@@ -182,14 +182,14 @@ const filteredVideos = computed(() => {
 })
 
 useSeoMeta({
-  title: 'Formation Laravel 12 Complète en Français - Tutoriels Vidéo par Laravel Jutsu',
-  description: 'Apprenez Laravel 12 en français avec les meilleurs tutoriels vidéo créés par Laravel Jutsu. Code source, API, authentification, Eloquent, déploiement et bonnes pratiques.',
-  ogTitle: 'Formation Laravel 12 Complète en Français - Tutoriels Vidéo par Laravel Jutsu',
-  ogDescription: 'Tutoriels Laravel 12 premium en français : API, authentification, Eloquent, tests, déploiement. Code source inclus pour chaque leçon.',
+  title: 'Formation Laravel 12 – Tutoriels Vidéo en Français | Laravel Jutsu',
+  description: 'Apprenez Laravel 12 en français avec nos tutoriels vidéo. Code source, API, authentification, Eloquent, déploiement et bonnes pratiques inclus.',
+  ogTitle: 'Formation Laravel 12 – Tutoriels Vidéo en Français | Laravel Jutsu',
+  ogDescription: 'Formation complète à Laravel 12 : API, Eloquent, authentification, projets réels. Tutoriels vidéo + code source inclus.',
   ogImage: '/images/home.jpg',
   twitterCard: 'summary_large_image',
-  twitterTitle: 'Formation Laravel 12 Complète - Tutoriels en Français',
-  twitterDescription: 'Maîtrisez Laravel 12 avec nos tutoriels vidéo en français. Code source, projets pratiques et astuces par Laravel Jutsu.',
+  twitterTitle: 'Formation Laravel 12 – Tutoriels Vidéo en Français | Laravel Jutsu',
+  twitterDescription: 'Maîtrisez Laravel 12 avec nos tutoriels vidéo en français. Code source, projets pratiques et bonnes pratiques incluses.',
   twitterImage: '/images/home.jpg',
 })
 
