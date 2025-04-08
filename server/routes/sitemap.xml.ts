@@ -1,17 +1,17 @@
-import { serverQueryContent } from '#content/server'
 import { SitemapStream, streamToPromise } from 'sitemap'
+import { serverQueryContent } from '#content/server'
 
 export default defineEventHandler(async (event) => {
   // Fetch all documents
   const docs = await serverQueryContent(event).find()
   const sitemap = new SitemapStream({
-    hostname: 'https://apprendre-laravel-12.net'
+    hostname: 'https://apprendre-laravel-12.net',
   })
 
   for (const doc of docs) {
     sitemap.write({
       url: doc._path,
-      changefreq: 'monthly'
+      changefreq: 'monthly',
     })
   }
   sitemap.end()
