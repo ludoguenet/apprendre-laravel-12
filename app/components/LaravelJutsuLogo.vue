@@ -3,7 +3,10 @@
     class="relative aspect-square"
     :style="{ width: (size || 56) + 'px', height: (size || 56) + 'px' }"
   >
-    <div class="absolute inset-0 bg-white/90 rounded-lg rotate-70 hover:animate-shuriken">
+    <div
+      class="absolute inset-0 bg-transparent rounded-lg rotate-70"
+      :class="{ 'hover:animate-shuriken': animate }"
+    >
       <div class="absolute inset-0 flex items-center justify-center">
         <div class="w-3/4 h-3/4 text-lime-500">
           <div class="relative w-full h-full">
@@ -24,7 +27,14 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  size?: number
-}>()
+withDefaults(
+  defineProps<{
+    size?: number
+    animate?: boolean
+  }>(),
+  {
+    size: 56,
+    animate: true,
+  },
+)
 </script>

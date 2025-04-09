@@ -1,124 +1,153 @@
 <template>
   <div class="container mx-auto px-4 py-8">
-    <section class="mb-12">
-      <h1 class="text-4xl font-extrabold mb-3 text-gray-800 leading-tight">
-        Formation Complète Laravel 12 : Tutoriels, Astuces et Bonnes Pratiques
-      </h1>
-      <p class="text-gray-600 text-lg max-w-3xl">
-        Maîtrisez Laravel 12 avec notre série de tutoriels vidéo professionnels, créée par Laravel Jutsu, le Samouraï légendaire du PHP. Code source, projets pratiques et explications détaillées pour tous niveaux.
-      </p>
+    <section class="bg-gradient-to-br from-white to-lime-50 py-16 px-6 rounded-xl shadow-sm mb-12">
+      <div class="max-w-4xl mx-auto">
+        <!-- En-tête avec badge de nouveauté -->
+        <div class="flex items-center mb-4">
+          <span class="bg-lime-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm uppercase tracking-wide">
+            Nouveau
+          </span>
+          <span class="text-zinc-500 text-sm ml-3">Mis à jour {{ currentMonth }} {{ currentYear }}</span>
+        </div>
 
-      <div class="flex flex-wrap gap-3 mt-4">
-        <UBadge
-          color="primary"
-          variant="soft"
-          size="lg"
-        >
-          Laravel 12 (Dernière Version)
-        </UBadge>
-        <UBadge
-          color="primary"
-          variant="soft"
-          size="lg"
-        >
-          100% en Français
-        </UBadge>
-        <UBadge
-          color="warning"
-          variant="soft"
-          size="lg"
-        >
-          Code Source Complet
-        </UBadge>
-        <UBadge
-          color="success"
-          variant="soft"
-          size="lg"
-        >
-          Mis à jour Mars 2025
-        </UBadge>
+        <!-- Titre principal avec style amélioré -->
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-5 text-zinc-800 leading-tight">
+          Formation Complète <span class="text-lime-600">Laravel 12</span>
+          <span class="block text-2xl md:text-3xl mt-2 font-semibold text-zinc-600">Tutoriels, Astuces & Bonnes Pratiques</span>
+        </h1>
+
+        <!-- Description avec mise en forme améliorée -->
+        <p class="text-zinc-600 text-lg mb-8 max-w-3xl leading-relaxed">
+          Maîtrisez Laravel 12 avec notre série de tutoriels vidéo professionnels, conçue par
+          <span class="font-semibold text-lime-600">Laravel Jutsu</span>, le Samouraï du PHP.
+          <span class="italic text-zinc-500">Code source complet, projets pratiques, explications claires pour tous niveaux.</span>
+        </p>
+
+        <!-- Badges dans un conteneur flex avec espacement amélioré -->
+        <div class="flex flex-wrap gap-3 mb-10">
+          <span class="bg-lime-600 text-white px-4 py-2 rounded-lg font-medium shadow-sm flex items-center gap-2">
+            <UIcon
+              name="i-lucide-check"
+              class="text-white"
+            />
+            Laravel 12 (Dernière Version)
+          </span>
+          <span class="bg-zinc-700 text-white px-4 py-2 rounded-lg font-medium shadow-sm flex items-center gap-2">
+            <UIcon
+              name="i-lucide-globe"
+              class="text-white"
+            />
+            100% en Français
+          </span>
+          <span class="bg-zinc-600 text-white px-4 py-2 rounded-lg font-medium shadow-sm flex items-center gap-2">
+            <UIcon
+              name="i-lucide-code"
+              class="text-white"
+            />
+            Code Source Complet
+          </span>
+          <span class="bg-lime-500 text-white px-4 py-2 rounded-lg font-medium shadow-sm flex items-center gap-2">
+            <UIcon
+              name="i-lucide-refresh-ccw"
+              class="text-white"
+            />
+            Mis à jour {{ currentMonth }} {{ currentYear }}
+          </span>
+        </div>
       </div>
     </section>
 
-    <div v-if="videos.length">
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
+    <div
+      v-if="videos.length"
+      class="animate-fade-in"
+    >
+      <!-- Barre de recherche + Compteur -->
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
         <UInput
           v-model="searchQuery"
-          placeholder="Rechercher un tutoriel Laravel 12 par titre, contenu ou tag..."
+          placeholder="Rechercher un tutoriel Laravel 12..."
           icon="i-lucide-search"
-          class="md:max-w-md w-full"
+          class="w-full md:max-w-md"
           size="lg"
+          color="primary"
         />
 
-        <div class="flex items-center gap-2 text-sm text-gray-500">
+        <div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
           <UIcon
             name="i-lucide-video"
             class="text-lime-500"
           />
-          <span>{{ videos.length }} tutoriels disponibles</span>
+          <span class="font-medium">
+            {{ videos.length }} tutoriel<span v-if="videos.length > 1">s</span> dispo
+          </span>
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      <!-- Grille de vidéos -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
         <VideoCard
           v-for="video in filteredVideos"
-          :key="video._path"
+          :key="video.path"
           :video="video"
         />
       </div>
 
+      <!-- Séparateur + Reset -->
       <USeparator v-if="filteredVideos.length !== videos.length" />
 
       <div
         v-if="filteredVideos.length !== videos.length"
-        class="flex justify-center mt-6"
+        class="flex justify-center mt-8"
       >
         <UButton
           icon="i-lucide-rotate-ccw"
           color="primary"
-          variant="soft"
+          variant="ghost"
+          size="lg"
+          class="rounded-full"
           @click="searchQuery = ''"
         >
-          Afficher tous les tutoriels Laravel 12
+          Réinitialiser la recherche
         </UButton>
       </div>
     </div>
 
     <UAlert
       v-else
-      title="Tutoriels Laravel 12 en préparation"
+      title="Bientôt disponible !"
       color="warning"
-      class="mt-8"
       icon="i-lucide-alert-triangle"
+      class="mt-8 bg-white border border-zinc-200 shadow-md rounded-xl p-6"
     >
       <template #description>
-        Nos tutoriels Laravel 12 sont en cours de production. Inscrivez-vous à notre newsletter pour être informé dès leur publication.
+        Nos tutoriels Laravel 12 sont en cours de production. Renseignez votre email pour être notifié.
       </template>
-      <div class="mt-4">
+
+      <div class="mt-4 flex flex-col sm:flex-row items-start sm:items-center gap-2">
         <UInput
           v-model="email"
           placeholder="Votre email"
           type="email"
-          class="mb-2 max-w-sm"
+          class="max-w-sm w-full"
         />
-        <UButton color="primary">
+        <UButton
+          color="primary"
+          class="w-full sm:w-auto"
+        >
           S'inscrire
         </UButton>
       </div>
     </UAlert>
 
-    <section class="mt-16 bg-gray-50 p-6 rounded-xl">
-      <h2
-        id="a-propos"
-        class="text-2xl font-bold mb-4"
-      >
+    <section class="mt-16 bg-gradient-to-br from-white via-gray-50 to-zinc-100 p-8 rounded-xl shadow-sm">
+      <h2 class="text-2xl font-bold text-zinc-800 mb-4">
         Pourquoi apprendre Laravel 12 ?
       </h2>
-      <p class="mb-4">
-        Laravel 12 apporte des améliorations significatives en performances, sécurité et productivité. Cette série de tutoriels créée par Laravel Jutsu, le meilleur formateur PHP/Laravel/Vue/Nuxt francophone, vous guide pas à pas dans la maîtrise de ce framework PHP incontournable.
+      <p class="text-zinc-600 mb-3">
+        Laravel 12 améliore les performances, la sécurité et la productivité. Cette série de tutoriels vous guide pas à pas...
       </p>
-      <p class="mb-4">
-        <strong>Contenu de la formation :</strong> API RESTful, authentification, bases de données, relations Eloquent, tests, déploiement, bonnes pratiques et bien plus.
+      <p class="text-zinc-600 mb-4">
+        <strong>Contenu :</strong> API, auth, Eloquent, déploiement, bonnes pratiques...
       </p>
       <UButton
         to="https://laraveljutsu.net"
@@ -131,31 +160,78 @@
     </section>
 
     <section class="mt-12 mb-8">
-      <h2 class="text-2xl font-bold mb-4">
+      <h2 class="text-2xl font-bold text-zinc-800 mb-6">
         Questions fréquentes sur Laravel 12
       </h2>
       <div class="space-y-4">
-        <details class="bg-white p-4 rounded shadow-sm">
-          <summary class="font-semibold cursor-pointer">
+        <!-- FAQ 1 -->
+        <details class="group bg-white p-5 rounded-xl shadow-sm border border-zinc-200 transition-all hover:shadow-md">
+          <summary class="flex items-center justify-between cursor-pointer text-zinc-800 font-medium group-open:text-lime-600 transition-colors">
             Quelles sont les nouveautés de Laravel 12 ?
+            <svg
+              class="w-5 h-5 text-zinc-400 group-open:rotate-180 transition-transform"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
           </summary>
-          <p class="pt-3">
+          <p class="pt-4 text-zinc-600 leading-relaxed">
             Laravel 12 introduit des améliorations de performance, une meilleure gestion des exceptions, des outils de développement améliorés et une compatibilité PHP 8.2+. Nos tutoriels couvrent toutes ces nouveautés en détail.
           </p>
         </details>
-        <details class="bg-white p-4 rounded shadow-sm">
-          <summary class="font-semibold cursor-pointer">
+
+        <!-- FAQ 2 -->
+        <details class="group bg-white p-5 rounded-xl shadow-sm border border-zinc-200 transition-all hover:shadow-md">
+          <summary class="flex items-center justify-between cursor-pointer text-zinc-800 font-medium group-open:text-lime-600 transition-colors">
             Ces tutoriels conviennent-ils aux débutants ?
+            <svg
+              class="w-5 h-5 text-zinc-400 group-open:rotate-180 transition-transform"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
           </summary>
-          <p class="pt-3">
+          <p class="pt-4 text-zinc-600 leading-relaxed">
             Absolument ! Notre formation Laravel 12 est conçue pour tous les niveaux, du débutant à l'expert. Nous expliquons chaque concept de manière progressive et claire.
           </p>
         </details>
-        <details class="bg-white p-4 rounded shadow-sm">
-          <summary class="font-semibold cursor-pointer">
+
+        <!-- FAQ 3 -->
+        <details class="group bg-white p-5 rounded-xl shadow-sm border border-zinc-200 transition-all hover:shadow-md">
+          <summary class="flex items-center justify-between cursor-pointer text-zinc-800 font-medium group-open:text-lime-600 transition-colors">
             Puis-je télécharger le code source des tutoriels ?
+            <svg
+              class="w-5 h-5 text-zinc-400 group-open:rotate-180 transition-transform"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
           </summary>
-          <p class="pt-3">
+          <p class="pt-4 text-zinc-600 leading-relaxed">
             Oui, chaque tutoriel inclut l'accès au code source complet via GitHub, permettant de suivre facilement et d'adapter les exemples à vos propres projets.
           </p>
         </details>
@@ -167,6 +243,20 @@
 <script setup lang="ts">
 const searchQuery = ref('')
 const email = ref('')
+
+const currentMonth = ref<string>()
+const currentYear = ref<number>()
+
+const initializeDate = () => {
+  const months = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre']
+
+  const now = new Date()
+
+  currentMonth.value = months[now.getMonth()] as string
+  currentYear.value = now.getFullYear() as number
+}
+
+initializeDate()
 
 const { data: videos } = await useAsyncData(() => queryCollection('content').order('order', 'ASC').all())
 
