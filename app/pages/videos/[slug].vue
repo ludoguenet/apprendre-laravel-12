@@ -1,5 +1,5 @@
 <template>
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mt-24">
     <UBreadcrumb
       :items="breadcrumbs"
       :variants="{
@@ -10,17 +10,15 @@
     />
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      <!-- Main Content Column -->
       <div class="lg:col-span-2">
-        <!-- Video Player with aspect ratio wrapper -->
         <div class="relative overflow-hidden rounded-xl shadow-lg bg-gray-900">
           <VideoPlayer
             :youtube-id="video.youtubeId"
             class="w-full"
+            aria-label="Vidéo de {{ video.title }}"
           />
         </div>
 
-        <!-- Video Info -->
         <div class="mt-6">
           <h1 class="text-3xl font-bold mb-3 text-gray-900 dark:text-white">
             {{ video.title }}
@@ -30,6 +28,7 @@
               <UIcon
                 name="i-lucide-calendar-days"
                 class="mr-1.5"
+                aria-hidden="true"
               />
               <span>{{ formatDate(video.date) }}</span>
             </div>
@@ -37,6 +36,7 @@
               <UIcon
                 name="i-lucide-clock-fading"
                 class="mr-1.5"
+                aria-hidden="true"
               />
               <span>{{ video.duration }}</span>
             </div>
@@ -47,12 +47,12 @@
               <UIcon
                 name="i-lucide-graduation-cap"
                 class="mr-1.5"
+                aria-hidden="true"
               />
               <span>{{ video.level }}</span>
             </div>
           </div>
 
-          <!-- Social Share Buttons -->
           <div class="flex space-x-2 mb-6">
             <UButton
               color="secondary"
@@ -62,6 +62,7 @@
               :to="`https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(video.title)}`"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Partager sur Twitter"
             >
               Partager
             </UButton>
@@ -73,13 +74,13 @@
               :to="`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Partager sur LinkedIn"
             >
               Partager
             </UButton>
           </div>
         </div>
 
-        <!-- Tabs for Description and Links -->
         <UTabs
           :items="items"
           color="primary"
@@ -108,6 +109,7 @@
                     <UIcon
                       :name="'i-lucide-external-link'"
                       class="mr-3 text-primary flex-shrink-0"
+                      aria-hidden="true"
                     />
                     <div>
                       <a
@@ -115,6 +117,7 @@
                         class="text-primary hover:underline font-medium"
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="Ouvrir le lien {{ link.name }}"
                       >
                         {{ link.name }}
                       </a>
@@ -139,13 +142,13 @@
         </UTabs>
       </div>
 
-      <!-- Sidebar -->
       <div class="mt-8 lg:mt-0">
         <div class="sticky top-24">
           <h3 class="text-lg font-semibold mb-4 flex items-center">
             <UIcon
               name="i-lucide-list-video"
               class="mr-2 text-primary"
+              aria-hidden="true"
             />
             Vidéos de la playlist
           </h3>
@@ -156,6 +159,7 @@
               :key="relatedVideo.order || index"
               :href="`/videos/${relatedVideo.slug}`"
               class="block transition-all duration-200"
+              aria-label="Accéder à la vidéo {{ relatedVideo.title }}"
             >
               <UCard
                 :key="relatedVideo._path"
@@ -177,6 +181,7 @@
                       :alt="relatedVideo.title"
                       class="w-full h-full object-cover"
                       loading="lazy"
+                      aria-hidden="true"
                     >
                     <div
                       class="absolute inset-0 flex items-center justify-center"
@@ -185,6 +190,7 @@
                       <UIcon
                         :name="relatedVideo.slug === slug ? 'i-lucide-circle-play' : 'i-lucide-play'"
                         class="text-white text-lg"
+                        aria-hidden="true"
                       />
                     </div>
                     <div
@@ -205,11 +211,12 @@
                       <span>{{ relatedVideo.duration || '00:00' }}</span>
                       <span
                         v-if="isWatched(relatedVideo.slug)"
-                        class="flex items-center text-green-600"
+                        class="flex items-center text-lime-600"
                       >
                         <UIcon
                           name="i-lucide-circle-check"
                           class="mr-0.5"
+                          aria-hidden="true"
                         />
                         Vu
                       </span>
@@ -220,7 +227,6 @@
             </a>
           </div>
 
-          <!-- CTA Card -->
           <UCard class="mt-6 bg-primary-50 dark:bg-primary-900/20 border-primary">
             <template #header>
               <div class="font-semibold">
@@ -237,6 +243,7 @@
               target="_blank"
               rel="noopener noreferrer"
               icon="i-lucide-calendar-check-2"
+              aria-label="Réserver une session de mentorat"
             >
               Réserver une session de mentorat
             </UButton>

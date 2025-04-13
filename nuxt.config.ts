@@ -39,7 +39,7 @@ export default defineNuxtConfig({
 
   // Nuxt UI configuration
   ui: {
-    colorMode: false,
+    colorMode: true,
   },
 
   // Compatibility and future features
