@@ -9,7 +9,7 @@ youtubeId: "OcpGHKwbhE0"
 repository: "https://github.com/ludoguenet/l12/tree/feat/models"
 thumbnail: "/images/m-dans-mvc.png"
 level: "débutant"
-isNew: true
+isNew: false
 tags:
     - models
     - mvc
