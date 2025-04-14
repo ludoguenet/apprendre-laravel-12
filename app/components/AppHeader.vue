@@ -12,7 +12,7 @@
 
           <div>
             <h1 class="text-lg sm:text-xl font-bold bg-gradient-to-r from-neutral-950 to-neutral-500 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent">
-              Laravel 12
+              Apprendre Laravel 12
             </h1>
             <p class="text-xs sm:text-sm text-neutral-500 dark:text-zinc-400">par Laravel Jutsu</p>
           </div>

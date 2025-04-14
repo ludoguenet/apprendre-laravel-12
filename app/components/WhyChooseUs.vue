@@ -1,8 +1,8 @@
 <template>
   <section class="mt-28 mb-24">
     <div class="text-center mb-20">
-      <span class="inline-block px-4 py-1 bg-lime-100 dark:bg-zinc-800 text-lime-700 dark:text-zinc-300 rounded-full text-sm font-medium border border-lime-200 dark:border-zinc-700">
-        Pourquoi nous choisir
+      <span class="inline-block px-4 py-1 bg-lime-100 dark:bg-lime-900 text-lime-700 dark:text-lime-300 rounded-full text-sm font-medium border border-lime-200 dark:border-lime-700">
+        Pourquoi nous choisir ?
       </span>
 
       <h2 class="text-3xl md:text-4xl font-extrabold text-zinc-900 dark:text-zinc-100 tracking-tight mt-4 mb-3">
