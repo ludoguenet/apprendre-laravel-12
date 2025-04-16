@@ -5,12 +5,6 @@
     aria-label="Contenu principal"
   >
     <div class="container mx-auto px-4 py-12">
-      <HeroSection
-        :current-month="currentMonth"
-        :current-year="currentYear"
-        aria-labelledby="hero-heading"
-      />
-
       <SearchBarWithStats
         v-model="searchQuery"
         :total-count="videos.length"
@@ -36,19 +30,9 @@
         @reset="searchQuery = ''"
       />
 
-      <WhyChooseUs
-        id="why-choose-us"
-        aria-labelledby="why-choose-us-heading"
-      />
-
       <FaqSection
         id="faq"
         aria-labelledby="faq-heading"
-      />
-
-      <CallToAction
-        id="cta"
-        aria-labelledby="cta-heading"
       />
     </div>
   </div>

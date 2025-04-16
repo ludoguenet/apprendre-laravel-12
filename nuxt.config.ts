@@ -12,12 +12,12 @@ export default defineNuxtConfig({
       meta: [
         { name: 'description', content: 'Tutoriels et ressources pour apprendre Laravel 12' },
       ],
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+    link: [
+        { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' },
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-        { rel: 'apple-touch-icon', href: '/favicon.png' },
-        { rel: 'icon', sizes: '192x192', href: '/favicon-192x192.png' },
+        { rel: 'shortcut icon', href: '/favicon.ico' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: 'manifest', href: '/site.webmanifest' },
       ],
     },
   },

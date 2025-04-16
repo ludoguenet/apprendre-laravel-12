@@ -1,32 +1,24 @@
 <template>
-  <div class="py-6 first:pt-0 last:pb-0">
+  <div class="py-4">
     <dt>
       <button
         type="button"
-        class="flex w-full items-start justify-between text-left text-zinc-900 dark:text-white font-semibold text-base/7 transition-colors"
+        class="flex w-full items-start justify-between text-left"
         :aria-expanded="open.toString()"
         :aria-controls="`faq-${keyId}`"
         @click="open = !open"
       >
-        <span v-html="question" />
-        <span class="ml-6 flex h-7 items-center">
-          <UIcon
-            v-if="open"
-            name="i-lucide-minus"
-            class="w-5 h-5 transition-transform"
-          />
-          <UIcon
-            v-else
-            name="i-lucide-plus"
-            class="w-5 h-5 transition-transform"
-          />
-        </span>
+        <span>{{ question }}</span>
+        <UIcon
+          :name="open ? 'i-lucide-minus' : 'i-lucide-plus'"
+          class="w-4 h-4 ml-2"
+        />
       </button>
     </dt>
     <dd
       v-show="open"
       :id="`faq-${keyId}`"
-      class="mt-3 pr-2 text-base/7 text-zinc-600 dark:text-zinc-300"
+      class="mt-2 text-gray-600 dark:text-gray-400"
     >
       <div v-html="answer" />
     </dd>

@@ -8,7 +8,7 @@
           class="flex items-center space-x-3 group"
           aria-label="Accueil Laravel Jutsu"
         >
-          <LaravelJutsuLogo class="w-8 h-8 sm:w-10 sm:h-10 text-lime-600 transition-transform duration-300 group-hover:rotate-6" />
+          <LaravelJutsuLogo />
 
           <div>
             <h1 class="text-lg sm:text-xl font-bold bg-gradient-to-r from-neutral-950 to-neutral-500 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent">
@@ -19,6 +19,11 @@
         </a>
 
         <div class="flex flex-wrap justify-center sm:justify-end items-center gap-2 sm:gap-4 w-full sm:w-auto">
+          <DarkModeToggle
+            :is-dark="isDark"
+            @toggle-dark="isDark = !isDark"
+          />
+
           <a
             href="https://www.youtube.com/channel/UC36hi0WMeiR8HpUy-A2s4vQ?sub_confirmation=1"
             target="_blank"
@@ -42,17 +47,12 @@
             aria-label="Rejoindre notre communauté Discord"
           >
             <UIcon
-              name="i-lucide-heart-handshake"
+              name="i-lucide-paw-print"
               class="size-4"
               aria-hidden="true"
             />
             <span>Rejoindre la communauté</span>
           </a>
-
-          <DarkModeToggle
-            :is-dark="isDark"
-            @toggle-dark="isDark = !isDark"
-          />
         </div>
       </nav>
     </div>
