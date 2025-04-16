@@ -12,7 +12,7 @@ export default defineNuxtConfig({
       meta: [
         { name: 'description', content: 'Tutoriels et ressources pour apprendre Laravel 12' },
       ],
-    link: [
+      link: [
         { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' },
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'shortcut icon', href: '/favicon.ico' },

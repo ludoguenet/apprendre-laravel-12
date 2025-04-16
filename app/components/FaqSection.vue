@@ -1,8 +1,14 @@
 <template>
-  <section class="py-12">
+  <section
+    class="py-12"
+    aria-labelledby="faq-title"
+  >
     <div class="max-w-3xl mx-auto px-4">
       <div class="text-center mb-8">
-        <h2 class="text-2xl font-bold">
+        <h2
+          id="faq-title"
+          class="text-2xl font-bold"
+        >
           Questions fréquentes
         </h2>
         <p class="mt-2 text-gray-600 dark:text-gray-400">
@@ -10,7 +16,11 @@
         </p>
       </div>
 
-      <dl class="divide-y">
+      <dl
+        class="divide-y"
+        role="list"
+        aria-labelledby="faq-title"
+      >
         <FaqItem
           v-for="(faq, i) in faqs"
           :key="i"

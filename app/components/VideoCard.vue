@@ -2,30 +2,42 @@
   <NuxtLink
     :to="`/videos/${video.slug}`"
     class="group"
+    :aria-label="`Voir la vidéo: ${video.title}`"
   >
-    <UCard class="h-full border-0 dark:bg-zinc-800 overflow-hidden">
+    <UCard
+      class="h-full border-0 dark:bg-zinc-800 overflow-hidden"
+      role="article"
+    >
       <div class="flex flex-col h-full">
         <div class="aspect-video bg-gray-100 dark:bg-zinc-900 relative">
           <img
             :src="video.thumbnail"
-            :alt="video.title"
+            :alt="`Miniature de la vidéo: ${video.title}`"
             class="w-full h-full object-cover"
             loading="lazy"
           >
-          <div class="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-0.5 rounded flex items-center gap-1">
+          <div
+            class="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-0.5 rounded flex items-center gap-1"
+            aria-label="Durée de la vidéo"
+          >
             <UIcon
               name="i-lucide-clock"
               size="xs"
+              aria-hidden="true"
             />
             <span>{{ video.duration || '00:00' }}</span>
           </div>
           <div
             v-if="video.isNew"
             class="absolute top-2 left-2 bg-lime-500 text-white text-xs px-2 py-0.5 rounded"
+            aria-label="Nouveau contenu"
           >
             Nouveau
           </div>
-          <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/30 transition-opacity">
+          <div
+            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/30 transition-opacity"
+            aria-hidden="true"
+          >
             <div class="w-8 h-8 bg-lime-500 dark:bg-zinc-500 rounded-full flex items-center justify-center">
               <UIcon
                 name="i-lucide-play"
@@ -44,7 +56,10 @@
             {{ video.description }}
           </p>
 
-          <div class="flex flex-wrap gap-1 mt-auto">
+          <div
+            class="flex flex-wrap gap-1 mt-auto"
+            aria-label="Tags"
+          >
             <UBadge
               v-for="tag in video.tags"
               :key="tag"
@@ -58,10 +73,14 @@
           </div>
 
           <div class="mt-3 pt-3 border-t border-gray-100 dark:border-zinc-700 flex justify-between items-center">
-            <p class="text-xs text-gray-500 dark:text-zinc-500 flex items-center gap-1">
+            <p
+              class="text-xs text-gray-500 dark:text-zinc-500 flex items-center gap-1"
+              aria-label="Date de publication"
+            >
               <UIcon
                 name="i-lucide-calendar"
                 size="xs"
+                aria-hidden="true"
               />
               {{ formatDate(video.date) }}
             </p>
@@ -69,6 +88,7 @@
               v-if="video.level"
               size="xs"
               :color="difficultyColor"
+              :aria-label="`Niveau: ${video.level}`"
             >
               {{ video.level }}
             </UBadge>

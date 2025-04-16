@@ -4,7 +4,7 @@
     role="main"
     aria-label="Contenu principal"
   >
-    <div class="container mx-auto px-4 py-12">
+    <div class="container mx-auto px-4 pt-24 md:pt-16">
       <SearchBarWithStats
         v-model="searchQuery"
         :total-count="videos.length"

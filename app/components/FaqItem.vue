@@ -4,20 +4,21 @@
       <button
         type="button"
         class="flex w-full items-start justify-between text-left"
-        :aria-expanded="open.toString()"
-        :aria-controls="`faq-${keyId}`"
-        @click="open = !open"
+        :aria-expanded="open"
+        :aria-controls="`faq-answer-${keyId}`"
+        @click="toggleFaq"
       >
         <span>{{ question }}</span>
         <UIcon
           :name="open ? 'i-lucide-minus' : 'i-lucide-plus'"
           class="w-4 h-4 ml-2"
+          aria-hidden="true"
         />
       </button>
     </dt>
     <dd
       v-show="open"
-      :id="`faq-${keyId}`"
+      :id="`faq-answer-${keyId}`"
       class="mt-2 text-gray-600 dark:text-gray-400"
     >
       <div v-html="answer" />
@@ -35,4 +36,8 @@ defineProps<{
 }>()
 
 const open = ref(false)
+
+function toggleFaq() {
+  open.value = !open.value
+}
 </script>
