@@ -57,16 +57,16 @@
           </p>
 
           <div
-            class="flex flex-wrap gap-1 mt-auto"
+            class="flex flex-wrap gap-2 mt-auto"
             aria-label="Tags"
           >
             <UBadge
               v-for="tag in video.tags"
               :key="tag"
               variant="soft"
-              size="xs"
+              size="sm"
               color="neutral"
-              class="dark:bg-zinc-800"
+              class="dark:bg-zinc-800 px-3 py-1.5 font-medium"
             >
               {{ tag }}
             </UBadge>
@@ -86,9 +86,10 @@
             </p>
             <UBadge
               v-if="video.level"
-              size="xs"
+              size="sm"
               :color="difficultyColor"
               :aria-label="`Niveau: ${video.level}`"
+              class="px-3 py-1.5 font-medium"
             >
               {{ video.level }}
             </UBadge>

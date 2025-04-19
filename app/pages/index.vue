@@ -73,11 +73,11 @@ useSeoMeta({
   description: 'Apprenez Laravel 12 en français avec nos tutoriels vidéo. Code source, API, authentification, Eloquent, déploiement et bonnes pratiques inclus.',
   ogTitle: 'Formation Laravel 12 – Tutoriels Vidéo en Français | Laravel Jutsu',
   ogDescription: 'Formation complète à Laravel 12 : API, Eloquent, authentification, projets réels. Tutoriels vidéo + code source inclus.',
-  ogImage: '/images/home.jpg',
+  ogImage: '/images/home.png',
   twitterCard: 'summary_large_image',
   twitterTitle: 'Formation Laravel 12 – Tutoriels Vidéo en Français | Laravel Jutsu',
   twitterDescription: 'Maîtrisez Laravel 12 avec nos tutoriels vidéo en français. Code source, projets pratiques et bonnes pratiques incluses.',
-  twitterImage: '/images/home.jpg',
+  twitterImage: '/images/home.png',
 })
 
 useHead({
