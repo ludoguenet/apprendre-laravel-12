@@ -7,17 +7,17 @@
       <div class="text-center mb-8">
         <h2
           id="faq-title"
-          class="text-2xl font-bold"
+          class="text-2xl font-bold dark:text-zinc-100"
         >
           Questions fréquentes
         </h2>
-        <p class="mt-2 text-gray-600 dark:text-gray-400">
+        <p class="mt-2 text-gray-600 dark:text-zinc-400">
           Les réponses aux questions sur notre formation Laravel 12
         </p>
       </div>
 
       <dl
-        class="divide-y"
+        class="divide-y dark:divide-zinc-800"
         role="list"
         aria-labelledby="faq-title"
       >

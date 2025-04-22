@@ -5,11 +5,11 @@
         :animate="false"
       />
 
-      <h2 class="text-lg font-medium text-zinc-500 dark:text-zinc-400 mb-2">
+      <h2 class="text-lg font-medium text-zinc-500 dark:text-zinc-300 mb-2">
         Formation Laravel 12 en Français
       </h2>
 
-      <p class="text-zinc-500 dark:text-zinc-500 text-sm mb-6">
+      <p class="text-zinc-500 dark:text-zinc-400 text-sm mb-6">
         Tutoriels vidéo et astuces pour maîtriser Laravel 12.
       </p>
 
@@ -20,7 +20,7 @@
           :href="link.url"
           target="_blank"
           rel="noopener"
-          class="text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300"
+          class="text-zinc-400 hover:text-zinc-600 dark:text-zinc-400 dark:hover:text-lime-400"
           :aria-label="link.label"
         >
           <UIcon
@@ -34,12 +34,12 @@
         <span
           v-for="tag in tags"
           :key="tag"
-          class="px-2 py-0.5 bg-zinc-100 dark:bg-zinc-800 text-zinc-500 text-xs rounded"
+          class="px-2 py-0.5 bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 text-xs rounded"
         >{{ tag }}</span>
       </div>
 
       <div class="border-t border-zinc-200 dark:border-zinc-800 pt-4">
-        <p class="text-xs text-zinc-400">
+        <p class="text-xs text-zinc-400 dark:text-zinc-500">
           © {{ new Date().getFullYear() }} apprendre-laravel-12.net
         </p>
       </div>

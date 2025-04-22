@@ -3,7 +3,7 @@
     <dt>
       <button
         type="button"
-        class="flex w-full items-start justify-between text-left"
+        class="flex w-full items-start justify-between text-left dark:text-zinc-100"
         :aria-expanded="open"
         :aria-controls="`faq-answer-${keyId}`"
         @click="toggleFaq"
@@ -11,7 +11,7 @@
         <span>{{ question }}</span>
         <UIcon
           :name="open ? 'i-lucide-minus' : 'i-lucide-plus'"
-          class="w-4 h-4 ml-2"
+          class="w-4 h-4 ml-2 dark:text-lime-400"
           aria-hidden="true"
         />
       </button>
@@ -19,7 +19,7 @@
     <dd
       v-show="open"
       :id="`faq-answer-${keyId}`"
-      class="mt-2 text-gray-600 dark:text-gray-400"
+      class="mt-2 text-gray-600 dark:text-zinc-400"
     >
       <div v-html="answer" />
     </dd>

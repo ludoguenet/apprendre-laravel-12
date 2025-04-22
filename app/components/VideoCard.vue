@@ -29,7 +29,7 @@
           </div>
           <div
             v-if="video.isNew"
-            class="absolute top-2 left-2 bg-lime-500 text-white text-xs px-2 py-0.5 rounded"
+            class="absolute top-2 left-2 bg-lime-500 dark:bg-lime-600 text-white text-xs px-2 py-0.5 rounded"
             aria-label="Nouveau contenu"
           >
             Nouveau
@@ -38,7 +38,7 @@
             class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/30 transition-opacity"
             aria-hidden="true"
           >
-            <div class="w-8 h-8 bg-lime-500 dark:bg-zinc-500 rounded-full flex items-center justify-center">
+            <div class="w-8 h-8 bg-lime-500 dark:bg-lime-600 rounded-full flex items-center justify-center">
               <UIcon
                 name="i-lucide-play"
                 class="text-white"
@@ -48,7 +48,7 @@
         </div>
 
         <div class="p-4 flex-1 flex flex-col">
-          <h3 class="text-base font-medium line-clamp-2 group-hover:text-lime-500 dark:text-zinc-100">
+          <h3 class="text-base font-medium line-clamp-2 group-hover:text-lime-500 dark:text-zinc-100 dark:group-hover:text-lime-400">
             {{ video.title }}
           </h3>
 
@@ -66,7 +66,7 @@
               variant="soft"
               size="sm"
               color="neutral"
-              class="dark:bg-zinc-800 px-3 py-1.5 font-medium"
+              class="dark:bg-zinc-700 dark:text-zinc-200 px-3 py-1.5 font-medium"
             >
               {{ tag }}
             </UBadge>
@@ -89,7 +89,7 @@
               size="sm"
               :color="difficultyColor"
               :aria-label="`Niveau: ${video.level}`"
-              class="px-3 py-1.5 font-medium"
+              class="px-3 py-1.5 font-medium dark:bg-lime-600 dark:text-white"
             >
               {{ video.level }}
             </UBadge>
