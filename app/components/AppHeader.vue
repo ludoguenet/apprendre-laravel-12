@@ -34,7 +34,7 @@
           class="fixed inset-0 bg-white/80 backdrop-blur-xl md:relative md:bg-transparent md:backdrop-blur-none transition-all duration-300 z-10"
           :class="[
             isOpen ? 'translate-x-0 dark:bg-zinc-900/80' : 'translate-x-full md:translate-x-0',
-            'md:flex md:flex-wrap md:justify-end md:items-center md:gap-2 md:w-auto'
+            'md:flex md:flex-wrap md:justify-end md:items-center md:gap-2 md:w-auto',
           ]"
         >
           <UButton

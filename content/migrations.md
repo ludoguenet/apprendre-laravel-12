@@ -9,7 +9,7 @@ youtubeId: "wiaCNCGnX-o"
 repository: "https://github.com/ludoguenet/l12/tree/feat/migrations"
 thumbnail: "/images/migrations-laravel.png"
 level: "débutant"
-isNew: true
+isNew: false
 tags:
     - migrations
     - database

@@ -29,9 +29,13 @@
           </div>
           <div
             v-if="video.isNew"
-            class="absolute top-2 left-2 bg-lime-500 dark:bg-lime-600 text-white text-xs px-2 py-0.5 rounded"
+            class="absolute top-2 left-2 bg-rose-500 dark:bg-red-600 text-white text-sm px-2 py-0.5 rounded flex items-center gap-1"
             aria-label="Nouveau contenu"
           >
+            <UIcon
+              name="i-lucide-badge-alert"
+              class="text-white"
+            />
             Nouveau
           </div>
           <div
