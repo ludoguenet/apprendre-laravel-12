@@ -20,7 +20,7 @@ links:
     url: https://laravel.com/docs/12.x/migrations
   - name: Laravel France
     icon: 🇫🇷
-    url: https://laravel.fr
+    url: https://laravel-france.com
   - name: Code source
     icon: 📎
     url: https://github.com/ludoguenet/l12/tree/feat/migrations

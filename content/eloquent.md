@@ -9,7 +9,7 @@ youtubeId: "vX6kJzjgL2s"
 repository: "https://github.com/ludoguenet/l12/tree/feat/eloquent"
 thumbnail: "/images/eloquent.png"
 level: "débutant"
-isNew: true
+isNew: false
 tags:
     - eloquent
     - orm
@@ -20,7 +20,7 @@ links:
     url: https://laravel.com/docs/12.x/eloquent
   - name: Laravel France
     icon: 🇫🇷
-    url: https://laravel.fr
+    url: https://laravel-france.com
   - name: Code source
     icon: 📎
     url: https://github.com/ludoguenet/l12/tree/feat/eloquent

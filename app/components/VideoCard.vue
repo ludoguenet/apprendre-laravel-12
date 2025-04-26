@@ -89,7 +89,7 @@
               size="sm"
               :color="difficultyColor"
               :aria-label="`Niveau: ${video.level}`"
-              class="px-3 py-1.5 font-medium dark:bg-lime-600 dark:text-white"
+              class="px-3 py-1.5 font-medium dark:text-white"
             >
               {{ video.level }}
             </UBadge>
