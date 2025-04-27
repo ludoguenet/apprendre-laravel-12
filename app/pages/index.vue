@@ -1,34 +1,30 @@
 <template>
   <div
-    class="min-h-screen bg-white dark:bg-zinc-900 mt-10"
+    class="min-h-screen bg-white dark:bg-zinc-900 mt-20"
     role="main"
     aria-label="Contenu principal"
   >
     <div class="container mx-auto px-4 pt-24 md:pt-16">
-      <SearchBarWithStats
-        v-model="searchQuery"
-        :total-count="videos.length"
-        :filtered-count="filteredVideos.length"
-        aria-label="Rechercher des vidéos"
-        aria-controls="video-grid"
-        aria-describedby="search-stats"
-      />
-
       <VideoGrid
         id="video-grid"
-        :videos="filteredVideos"
+        :videos="videos || []"
         aria-live="polite"
         aria-busy="false"
       />
 
-      <SearchReset
-        v-if="filteredVideos.length !== videos.length"
-        :count="filteredVideos.length"
-        :query="searchQuery"
-        aria-label="Réinitialiser la recherche"
-        aria-controls="video-grid"
-        @reset="searchQuery = ''"
-      />
+      <div v-if="totalPages > 1" class="flex justify-center mt-8">
+        <UPagination
+          v-model:page="currentPage"
+          :total="totalVideos"
+          :items-per-page="itemsPerPage"
+          :show-edges="true"
+          :sibling-count="1"
+          color="lime"
+          active-color="primary"
+          variant="outline"
+          active-variant="subtle"
+        />
+      </div>
 
       <FaqSection
         id="faq"
@@ -39,7 +35,8 @@
 </template>
 
 <script setup lang="ts">
-const searchQuery = ref('')
+const currentPage = ref(1)
+const itemsPerPage = 6
 
 const currentMonth = ref<string>()
 const currentYear = ref<number>()
@@ -55,17 +52,25 @@ const initializeDate = () => {
 
 initializeDate()
 
-const { data: videos } = await useAsyncData(() => queryCollection('content').order('order', 'ASC').all())
+// Fetch total count of videos
+const { data: totalVideos } = await useAsyncData(() => queryCollection('content').count(), {
+  default: () => 0,
+})
 
-const filteredVideos = computed(() => {
-  if (!searchQuery.value) return videos.value
+// Fetch paginated videos
+const { data: videos } = await useAsyncData(
+  () => queryCollection('content')
+    .order('order', 'ASC')
+    .skip((currentPage.value - 1) * itemsPerPage)
+    .limit(itemsPerPage)
+    .all(),
+  {
+    watch: [currentPage],
+  },
+)
 
-  const query = searchQuery.value.toLowerCase()
-  return videos.value.filter(video =>
-    video.title?.toLowerCase().includes(query)
-    || video.description?.toLowerCase().includes(query)
-    || video.tags?.some((tag: string) => tag.toLowerCase().includes(query)),
-  )
+const totalPages = computed(() => {
+  return Math.ceil((totalVideos.value || 0) / itemsPerPage)
 })
 
 useSeoMeta({

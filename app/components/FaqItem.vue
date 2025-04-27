@@ -11,7 +11,7 @@
         <span>{{ question }}</span>
         <UIcon
           :name="open ? 'i-lucide-minus' : 'i-lucide-plus'"
-          class="w-4 h-4 ml-2 dark:text-lime-400"
+          class="w-4 h-4 ml-2 text-lime-500 dark:text-lime-400"
           aria-hidden="true"
         />
       </button>

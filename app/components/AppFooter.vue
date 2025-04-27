@@ -20,7 +20,14 @@
           :href="link.url"
           target="_blank"
           rel="noopener"
-          class="text-zinc-400 hover:text-zinc-600 dark:text-zinc-400 dark:hover:text-lime-400"
+          :class="[
+            'hover:opacity-80 transition-opacity',
+            link.name === 'youtube' ? 'hover:text-red-500 dark:hover:text-red-400' : '',
+            link.name === 'twitter' ? 'hover:text-sky-500 dark:hover:text-sky-400' : '',
+            link.name === 'linkedin' ? 'hover:text-blue-600 dark:hover:text-blue-400' : '',
+            link.name === 'bluesky' ? 'hover:text-sky-500 dark:hover:text-sky-400' : '',
+            link.name === 'github' ? 'hover:text-zinc-600 dark:hover:text-zinc-300' : '',
+          ]"
           :aria-label="link.label"
         >
           <UIcon
@@ -30,12 +37,15 @@
         </a>
       </div>
 
-      <div class="flex flex-wrap justify-center gap-2 mb-6">
+      <div class="flex justify-center gap-2 mb-6">
         <span
           v-for="tag in tags"
           :key="tag"
-          class="px-2 py-0.5 bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 text-xs rounded"
+          class="px-2 py-0.5 bg-lime-100 dark:bg-lime-900 text-lime-600 dark:text-lime-400 text-xs rounded"
         >{{ tag }}</span>
+        <span class="px-2 py-0.5 bg-lime-100 dark:bg-lime-900 text-lime-600 dark:text-lime-400 text-xs rounded font-semibold animate-pulse">
+          chaud!
+        </span>
       </div>
 
       <div class="border-t border-zinc-200 dark:border-zinc-800 pt-4">
