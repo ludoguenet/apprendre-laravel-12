@@ -12,7 +12,10 @@
         aria-busy="false"
       />
 
-      <div v-if="totalPages > 1" class="flex justify-center mt-8">
+      <div
+        v-if="totalPages > 1"
+        class="flex justify-center mt-8"
+      >
         <UPagination
           v-model:page="currentPage"
           :total="totalVideos"

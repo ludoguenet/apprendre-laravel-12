@@ -33,7 +33,12 @@
 </template>
 
 <script setup lang="ts">
-const faqs = [
+interface FaqItem {
+  question: string
+  answer: string
+}
+
+const faqs: FaqItem[] = [
   {
     question: 'Quelles sont les nouveautés de Laravel 12 ?',
     answer: `
