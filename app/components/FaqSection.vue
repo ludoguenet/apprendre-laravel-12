@@ -1,6 +1,6 @@
 <template>
   <section
-    class="py-12"
+    class="py-12 mt-16"
     aria-labelledby="faq-title"
   >
     <div class="max-w-3xl mx-auto px-4">
