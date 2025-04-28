@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen bg-white dark:bg-zinc-900 mt-20"
+    class="bg-white dark:bg-zinc-900 mt-20"
     role="main"
     aria-label="Contenu principal"
   >
@@ -14,7 +14,7 @@
 
       <div
         v-if="totalPages > 1"
-        class="flex justify-center mt-8"
+        class="flex justify-center mt-8 mb-12"
       >
         <UPagination
           v-model:page="currentPage"
@@ -32,6 +32,7 @@
       <FaqSection
         id="faq"
         aria-labelledby="faq-heading"
+        class="mb-12"
       />
     </div>
   </div>
@@ -43,6 +44,14 @@ const itemsPerPage = 6
 
 const currentMonth = ref<string>()
 const currentYear = ref<number>()
+
+// Add watch effect for page changes
+watch(currentPage, () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+})
 
 const initializeDate = () => {
   const months = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre']

@@ -37,17 +37,6 @@
         </a>
       </div>
 
-      <div class="flex justify-center gap-2 mb-6">
-        <span
-          v-for="tag in tags"
-          :key="tag"
-          class="px-2 py-0.5 bg-lime-100 dark:bg-lime-900 text-lime-600 dark:text-lime-400 text-xs rounded"
-        >{{ tag }}</span>
-        <span class="px-2 py-0.5 bg-lime-100 dark:bg-lime-900 text-lime-600 dark:text-lime-400 text-xs rounded font-semibold animate-pulse">
-          chaud!
-        </span>
-      </div>
-
       <div class="border-t border-zinc-200 dark:border-zinc-800 pt-4">
         <p class="text-xs text-zinc-400 dark:text-zinc-500">
           © {{ new Date().getFullYear() }} apprendre-laravel-12.net
@@ -89,13 +78,5 @@ const socialLinks = [
     icon: 'i-lucide-github',
     label: 'GitHub',
   },
-]
-
-const tags = [
-  'Laravel 12',
-  'PHP 8.3',
-  'Formation PHP',
-  'Tutoriels Backend',
-  'Développement Web',
 ]
 </script>
