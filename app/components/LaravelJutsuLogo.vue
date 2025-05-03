@@ -5,14 +5,18 @@
       class="absolute inset-0 -m-1 rounded-full bg-lime-400 opacity-25 animate-ping"
       aria-hidden="true"
     />
-    <img
+    <NuxtImg
       src="/logo.png"
       class="relative z-10 rounded-full w-full h-full object-cover"
       alt="Logo Laravel Jutsu"
       :aria-label="logoLabel"
       @mouseenter="isHovered = true"
       @mouseleave="isHovered = false"
-    >
+      format="webp"
+      quality="80"
+      sizes="88px"
+      provider="ipx"
+    />
   </div>
 </template>
 

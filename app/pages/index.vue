@@ -10,11 +10,15 @@
         :videos="videos || []"
         aria-live="polite"
         aria-busy="false"
+        role="list"
+        aria-label="Liste des vidéos"
       />
 
       <div
         v-if="totalPages > 1"
         class="flex justify-center mt-8 mb-12"
+        role="navigation"
+        aria-label="Pagination"
       >
         <UPagination
           v-model:page="currentPage"
@@ -26,6 +30,7 @@
           active-color="primary"
           variant="outline"
           active-variant="subtle"
+          aria-label="Navigation des pages"
         />
       </div>
 
@@ -33,6 +38,7 @@
         id="faq"
         aria-labelledby="faq-heading"
         class="mb-12"
+        role="region"
       />
     </div>
   </div>
