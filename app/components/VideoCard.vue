@@ -15,6 +15,8 @@
             :alt="`Miniature de la vidéo: ${video.title}`"
             class="w-full h-full object-cover"
             loading="lazy"
+            format="webp"
+            sizes="100vw"
           >
           <div
             class="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-0.5 rounded flex items-center gap-1"

@@ -22,7 +22,7 @@
           :items-per-page="itemsPerPage"
           :show-edges="true"
           :sibling-count="1"
-          color="lime"
+          color="primary"
           active-color="primary"
           variant="outline"
           active-variant="subtle"
@@ -39,6 +39,10 @@
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'nuxt/app'
+
+const router = useRouter()
+
 const currentPage = ref(1)
 const itemsPerPage = 6
 
@@ -46,11 +50,9 @@ const currentMonth = ref<string>()
 const currentYear = ref<number>()
 
 // Add watch effect for page changes
-watch(currentPage, () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  })
+watch(currentPage, async () => {
+  await nextTick()
+  window.scrollTo(0, 0)
 })
 
 const initializeDate = () => {
