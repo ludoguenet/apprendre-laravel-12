@@ -182,10 +182,10 @@
                       class="w-full h-full object-cover"
                       loading="lazy"
                       aria-hidden="true"
+                      provider="ipx"
                       format="webp"
                       quality="80"
                       sizes="96px"
-                      provider="ipx"
                     />
                     <div
                       class="absolute inset-0 flex items-center justify-center"

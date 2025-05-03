@@ -6,16 +6,16 @@
       aria-hidden="true"
     />
     <NuxtImg
-      src="/logo.png"
+      src="/images/logo.png"
       class="relative z-10 rounded-full w-full h-full object-cover"
       alt="Logo Laravel Jutsu"
       :aria-label="logoLabel"
       @mouseenter="isHovered = true"
       @mouseleave="isHovered = false"
+      provider="ipx"
       format="webp"
       quality="80"
       sizes="88px"
-      provider="ipx"
     />
   </div>
 </template>

@@ -15,10 +15,10 @@
             :alt="`Miniature de la vidéo: ${video.title}`"
             class="w-full h-full object-cover"
             loading="lazy"
+            provider="ipx"
             format="webp"
             quality="80"
             sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            provider="ipx"
           />
           <div
             class="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-0.5 rounded flex items-center gap-1"
