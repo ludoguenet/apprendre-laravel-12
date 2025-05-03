@@ -5,6 +5,7 @@ interface ExtendedNuxtConfig extends NuxtConfig {
     quality: number
     format: string[]
     screens: Record<string, number>
+    provider: string | undefined
   }
 }
 
@@ -47,6 +48,7 @@ export default defineNuxtConfig({
       xl: 1280,
       xxl: 1536,
     },
+    provider: 'ipx',
   },
 
   // Performance optimization
