@@ -182,7 +182,7 @@
                       class="w-full h-full object-cover"
                       loading="lazy"
                       aria-hidden="true"
-                      provider="ipx"
+                      provider="static"
                       format="webp"
                       quality="80"
                       sizes="96px"

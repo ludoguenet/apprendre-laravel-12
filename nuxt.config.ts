@@ -5,16 +5,6 @@ interface ExtendedNuxtConfig extends NuxtConfig {
     quality: number
     format: string[]
     screens: Record<string, number>
-    provider: string | undefined
-    ipx?: {
-      maxAge: number
-      sharp?: {
-        animated: boolean
-      }
-    }
-    cloudinary?: {
-      baseURL: string
-    }
   }
 }
 
@@ -56,13 +46,6 @@ export default defineNuxtConfig({
       lg: 1024,
       xl: 1280,
       xxl: 1536,
-    },
-    provider: 'ipx',
-    ipx: {
-      maxAge: 60 * 60 * 24 * 7, // 7 days
-      sharp: {
-        animated: true
-      }
     },
   },
 

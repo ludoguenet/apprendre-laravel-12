@@ -12,7 +12,7 @@
       :aria-label="logoLabel"
       @mouseenter="isHovered = true"
       @mouseleave="isHovered = false"
-      provider="ipx"
+      provider="static"
       format="webp"
       quality="80"
       sizes="88px"
