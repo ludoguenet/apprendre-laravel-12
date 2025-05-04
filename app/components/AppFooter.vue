@@ -1,8 +1,9 @@
 <template>
-  <footer class="bg-white dark:bg-zinc-900 py-8">
+  <footer class="bg-white dark:bg-zinc-900 py-8" role="contentinfo">
     <div class="max-w-3xl mx-auto px-4 text-center">
       <LaravelJutsuLogo
         :animate="false"
+        aria-hidden="true"
       />
 
       <h2 class="text-lg font-medium text-zinc-500 dark:text-zinc-300 mb-2">
@@ -13,13 +14,13 @@
         Tutoriels vidéo et astuces pour maîtriser Laravel 12.
       </p>
 
-      <div class="flex justify-center gap-4 mb-6">
+      <nav class="flex justify-center gap-4 mb-6" role="navigation" aria-label="Réseaux sociaux">
         <a
           v-for="link in socialLinks"
           :key="link.name"
           :href="link.url"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           :class="[
             'hover:opacity-80 transition-opacity',
             link.name === 'youtube' ? 'hover:text-red-500 dark:hover:text-red-400' : '',
@@ -28,14 +29,15 @@
             link.name === 'bluesky' ? 'hover:text-sky-500 dark:hover:text-sky-400' : '',
             link.name === 'github' ? 'hover:text-zinc-600 dark:hover:text-zinc-300' : '',
           ]"
-          :aria-label="link.label"
+          :aria-label="`${link.label} (s'ouvre dans un nouvel onglet)`"
         >
           <UIcon
             :name="link.icon"
             class="w-5 h-5"
+            aria-hidden="true"
           />
         </a>
-      </div>
+      </nav>
 
       <div class="border-t border-zinc-200 dark:border-zinc-800 pt-4">
         <p class="text-xs text-zinc-400 dark:text-zinc-500">
