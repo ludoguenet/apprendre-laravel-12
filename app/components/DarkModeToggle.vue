@@ -5,7 +5,21 @@
       color="neutral"
       variant="ghost"
       @click="$emit('toggleDark')"
-    />
+      :aria-label="isDark ? 'Passer en mode clair' : 'Passer en mode sombre'"
+      role="switch"
+      :aria-checked="isDark"
+      tabindex="0"
+      @keydown.enter="$emit('toggleDark')"
+      @keydown.space.prevent="$emit('toggleDark')"
+    >
+      <template #icon>
+        <UIcon
+          :name="isDark ? 'i-lucide-moon' : 'i-lucide-sun'"
+          class="size-5"
+          aria-hidden="true"
+        />
+      </template>
+    </UButton>
   </div>
 </template>
 
