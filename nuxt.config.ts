@@ -2,7 +2,7 @@ export default defineNuxtConfig({
   // Core configuration
 
   // Modules
-  modules: ['@nuxt/content', '@nuxt/eslint', '@nuxt/ui'],
+  modules: ['@nuxt/content', '@nuxt/eslint', '@nuxt/ui', '@nuxt/image'],
 
   // Development tools
   devtools: { enabled: true },
@@ -61,6 +61,19 @@ export default defineNuxtConfig({
   eslint: {
     config: {
       stylistic: true,
+    },
+  },
+
+  // Image module configuration
+  image: {
+    presets: {
+      thumbnail: {
+        modifiers: {
+          format: 'webp',
+          width: 375,
+          height: 210,
+        },
+      },
     },
   },
 })

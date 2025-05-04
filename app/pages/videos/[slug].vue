@@ -176,11 +176,12 @@
               >
                 <div class="flex gap-3">
                   <div class="flex-shrink-0 w-24 h-16 relative rounded-lg overflow-hidden">
-                    <img
+                    <NuxtImg
                       :src="relatedVideo.thumbnail"
                       :alt="relatedVideo.title"
                       class="w-full h-full object-cover"
-                    >
+                      preset="thumbnail"
+                    />
                     <div
                       class="absolute inset-0 flex items-center justify-center"
                       :class="relatedVideo.slug === slug ? 'bg-primary/60' : 'bg-black/30'"
