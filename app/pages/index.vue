@@ -45,10 +45,6 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'nuxt/app'
-
-const router = useRouter()
-
 const currentPage = ref(1)
 const itemsPerPage = 6
 

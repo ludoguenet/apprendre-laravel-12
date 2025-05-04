@@ -10,16 +10,11 @@
     >
       <div class="flex flex-col h-full">
         <div class="aspect-video bg-gray-100 dark:bg-zinc-900 relative">
-          <NuxtImg
+          <img
             :src="video.thumbnail"
             :alt="`Miniature de la vidéo: ${video.title}`"
             class="w-full h-full object-cover"
-            loading="lazy"
-            provider="static"
-            format="webp"
-            quality="80"
-            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-          />
+          >
           <div
             class="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-0.5 rounded flex items-center gap-1"
             aria-label="Durée de la vidéo"

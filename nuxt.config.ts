@@ -1,18 +1,8 @@
-import type { NuxtConfig } from 'nuxt/config'
-
-interface ExtendedNuxtConfig extends NuxtConfig {
-  image?: {
-    quality: number
-    format: string[]
-    screens: Record<string, number>
-  }
-}
-
 export default defineNuxtConfig({
   // Core configuration
 
   // Modules
-  modules: ['@nuxt/content', '@nuxt/eslint', '@nuxt/ui', '@nuxt/image'],
+  modules: ['@nuxt/content', '@nuxt/eslint', '@nuxt/ui'],
 
   // Development tools
   devtools: { enabled: true },
@@ -20,7 +10,7 @@ export default defineNuxtConfig({
     head: {
       title: 'Apprendre Laravel 12',
       htmlAttrs: {
-        lang: 'fr'
+        lang: 'fr',
       },
       meta: [
         { name: 'description', content: 'Tutoriels et ressources pour apprendre Laravel 12' },
@@ -33,26 +23,6 @@ export default defineNuxtConfig({
         { rel: 'manifest', href: '/site.webmanifest' },
       ],
     },
-  },
-
-  // Image module configuration
-  image: {
-    quality: 80,
-    format: ['webp'],
-    screens: {
-      xs: 320,
-      sm: 640,
-      md: 768,
-      lg: 1024,
-      xl: 1280,
-      xxl: 1536,
-    },
-  },
-
-  // Performance optimization
-  nitro: {
-    compressPublicAssets: true,
-    minify: true,
   },
 
   // Styling
@@ -81,10 +51,16 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2024-11-01',
 
+  // Performance optimization
+  nitro: {
+    compressPublicAssets: true,
+    minify: true,
+  },
+
   // ESLint configuration
   eslint: {
     config: {
       stylistic: true,
     },
   },
-} as ExtendedNuxtConfig)
+})
