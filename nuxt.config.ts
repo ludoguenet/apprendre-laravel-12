@@ -131,8 +131,7 @@ export default defineNuxtConfig({
         output: {
           manualChunks: {
             'vendor': ['@nuxt/ui'],
-            'content': ['@nuxt/content'],
-            'ui': ['@nuxt/ui']
+            'content': ['@nuxt/content']
           }
         }
       },
@@ -147,7 +146,11 @@ export default defineNuxtConfig({
       }
     },
     optimizeDeps: {
-      include: ['@nuxt/ui']
+      include: ['@nuxt/ui'],
+      exclude: ['@nuxt/kit']
+    },
+    ssr: {
+      noExternal: ['@nuxt/ui']
     }
   }
 })
