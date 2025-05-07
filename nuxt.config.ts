@@ -1,3 +1,13 @@
+import type { NuxtConfig } from 'nuxt/config'
+
+interface ExtendedNuxtConfig extends NuxtConfig {
+  image?: {
+    quality: number
+    format: string[]
+    screens: Record<string, number>
+  }
+}
+
 export default defineNuxtConfig({
   // Core configuration
 
@@ -35,6 +45,26 @@ export default defineNuxtConfig({
         { rel: 'manifest', href: '/site.webmanifest' },
       ],
     },
+  },
+
+  // Image module configuration
+  image: {
+    quality: 80,
+    format: ['webp'],
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+    },
+  },
+
+  // Performance optimization
+  nitro: {
+    compressPublicAssets: true,
+    minify: true,
   },
 
   // Styling
