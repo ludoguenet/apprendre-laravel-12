@@ -1,8 +1,15 @@
 <template>
-  <header class="fixed top-0 left-0 right-0 z-50" role="banner">
+  <header
+    class="fixed top-0 left-0 right-0 z-50"
+    role="banner"
+  >
     <div class="absolute inset-0 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl border-b border-neutral-200/50 dark:border-zinc-800/50" />
     <div class="relative container mx-auto px-4 sm:px-6 py-4">
-      <nav class="flex items-center justify-between" role="navigation" aria-label="Navigation principale">
+      <nav
+        class="flex items-center justify-between"
+        role="navigation"
+        aria-label="Navigation principale"
+      >
         <a
           href="/"
           class="flex items-center space-x-3 group relative z-0"
@@ -22,11 +29,11 @@
           color="neutral"
           variant="ghost"
           class="md:hidden"
-          @click="isOpen = !isOpen"
           :aria-label="isOpen ? 'Fermer le menu' : 'Ouvrir le menu'"
           :aria-expanded="isOpen"
           aria-controls="mobile-menu"
           aria-haspopup="true"
+          @click="isOpen = !isOpen"
         >
           <UIcon
             :name="isOpen ? 'i-lucide-x' : 'i-lucide-menu'"
@@ -49,8 +56,8 @@
             color="neutral"
             variant="ghost"
             class="absolute top-4 right-4 md:hidden"
-            @click="isOpen = false"
             aria-label="Fermer le menu"
+            @click="isOpen = false"
           >
             <UIcon
               name="i-lucide-x"
@@ -58,7 +65,11 @@
               aria-hidden="true"
             />
           </UButton>
-          <div class="flex flex-col md:flex-row items-center gap-4 p-4 md:p-0" role="group" aria-label="Actions">
+          <div
+            class="flex flex-col md:flex-row items-center gap-4 p-4 md:p-0"
+            role="group"
+            aria-label="Actions"
+          >
             <DarkModeToggle
               :is-dark="isDark"
               @toggle-dark="isDark = !isDark"

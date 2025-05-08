@@ -1,10 +1,6 @@
 export default defineNuxtConfig({
   // Core configuration
 
-  nitro: {
-    static: true,
-  },
-
   // Modules
   modules: ['@nuxt/content', '@nuxt/eslint', '@nuxt/ui', '@nuxt/image'],
 
@@ -54,6 +50,9 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
   compatibilityDate: '2024-11-01',
+  nitro: {
+    static: true,
+  },
 
   // Performance optimization
   nitro: {

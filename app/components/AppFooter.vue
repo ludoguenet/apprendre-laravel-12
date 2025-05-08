@@ -1,5 +1,8 @@
 <template>
-  <footer class="bg-white dark:bg-zinc-900 py-8" role="contentinfo">
+  <footer
+    class="bg-white dark:bg-zinc-900 py-8"
+    role="contentinfo"
+  >
     <div class="max-w-3xl mx-auto px-4 text-center">
       <LaravelJutsuLogo
         :animate="false"
@@ -14,7 +17,11 @@
         Tutoriels vidéo et astuces pour maîtriser Laravel 12.
       </p>
 
-      <nav class="flex justify-center gap-4 mb-6" role="navigation" aria-label="Réseaux sociaux">
+      <nav
+        class="flex justify-center gap-4 mb-6"
+        role="navigation"
+        aria-label="Réseaux sociaux"
+      >
         <a
           v-for="link in socialLinks"
           :key="link.name"

@@ -4,11 +4,11 @@
       :icon="isDark ? 'i-lucide-moon' : 'i-lucide-sun'"
       color="neutral"
       variant="ghost"
-      @click="$emit('toggleDark')"
       :aria-label="isDark ? 'Passer en mode clair' : 'Passer en mode sombre'"
       role="switch"
       :aria-checked="isDark"
       tabindex="0"
+      @click="$emit('toggleDark')"
       @keydown.enter="$emit('toggleDark')"
       @keydown.space.prevent="$emit('toggleDark')"
     >
