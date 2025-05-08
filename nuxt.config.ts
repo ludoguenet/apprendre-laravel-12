@@ -1,5 +1,8 @@
 export default defineNuxtConfig({
   // Core configuration
+  nitro: {
+    static: true,
+  },
 
   // Modules
   modules: ['@nuxt/content', '@nuxt/eslint', '@nuxt/ui', '@nuxt/image'],
