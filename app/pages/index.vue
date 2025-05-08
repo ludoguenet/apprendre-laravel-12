@@ -46,7 +46,7 @@
 
 <script setup lang="ts">
 const currentPage = ref(1)
-const itemsPerPage = 6
+const itemsPerPage = 9
 
 const currentMonth = ref<string>()
 const currentYear = ref<number>()
@@ -76,7 +76,7 @@ const { data: totalVideos } = await useAsyncData(() => queryCollection('content'
 // Fetch paginated videos
 const { data: videos } = await useAsyncData(
   () => queryCollection('content')
-    .order('order', 'ASC')
+    .order('order', 'DESC')
     .skip((currentPage.value - 1) * itemsPerPage)
     .limit(itemsPerPage)
     .all(),
