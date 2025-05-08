@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
   // Core configuration
+
   nitro: {
     static: true,
   },
