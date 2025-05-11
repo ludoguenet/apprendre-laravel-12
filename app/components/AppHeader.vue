@@ -66,14 +66,14 @@
             />
           </UButton>
           <div
-            class="flex flex-col md:flex-row items-center gap-4 p-4 md:p-0"
+            class="flex flex-col md:flex-row items-center justify-center md:justify-end gap-4 p-4 md:p-0 min-h-screen md:min-h-0"
             role="group"
             aria-label="Actions"
           >
-            <DarkModeToggle
+            <!-- <DarkModeToggle
               :is-dark="isDark"
               @toggle-dark="isDark = !isDark"
-            />
+            /> -->
 
             <a
               href="https://www.youtube.com/channel/UC36hi0WMeiR8HpUy-A2s4vQ?sub_confirmation=1"

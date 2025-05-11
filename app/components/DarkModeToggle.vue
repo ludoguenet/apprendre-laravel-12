@@ -1,7 +1,7 @@
 <template>
   <div>
     <UButton
-      :icon="isDark ? 'i-lucide-moon' : 'i-lucide-sun'"
+      :icon="isDark ? 'i-lucide-sun' : 'i-lucide-moon'"
       color="neutral"
       variant="ghost"
       :aria-label="isDark ? 'Passer en mode clair' : 'Passer en mode sombre'"
