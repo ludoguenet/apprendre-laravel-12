@@ -70,11 +70,6 @@
             role="group"
             aria-label="Actions"
           >
-            <!-- <DarkModeToggle
-              :is-dark="isDark"
-              @toggle-dark="isDark = !isDark"
-            /> -->
-
             <a
               href="https://www.youtube.com/channel/UC36hi0WMeiR8HpUy-A2s4vQ?sub_confirmation=1"
               target="_blank"
@@ -112,15 +107,5 @@
 </template>
 
 <script setup lang="ts">
-const colorMode = useColorMode()
 const isOpen = ref(false)
-
-const isDark = computed({
-  get() {
-    return colorMode.value === 'dark'
-  },
-  set() {
-    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
-  },
-})
 </script>
