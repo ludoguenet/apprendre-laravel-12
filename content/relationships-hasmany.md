@@ -9,7 +9,7 @@ youtubeId: "2hZiZBEi-J0"
 repository: "https://github.com/ludoguenet/l12/tree/feat/relationships-hasmany"
 thumbnail: "/images/relationships-hasmany.png"
 level: "intermédiaire"
-isNew: true
+isNew: false
 tags:
     - eloquent
     - relationships
