@@ -1,8 +1,8 @@
 ---
-title: "Relations HasMany/BelongsTo dans Laravel 12"
+title: "Relations HasMany/BelongsTo"
 order: 7
 slug: relationships-hasmany
-description: "Découvrez comment implémenter et utiliser les relations HasMany et BelongsTo dans Laravel 12 pour lier vos modèles de manière élégante et efficace."
+description: "Découvrez comment implémenter et utiliser les relations HasMany et BelongsTo pour lier vos modèles de manière élégante et efficace."
 date: "2025-04-26"
 duration: "23:57"
 youtubeId: "2hZiZBEi-J0"
@@ -28,7 +28,7 @@ links:
     url: https://github.com/ludoguenet/l12/tree/feat/relationships-hasmany
 ---
 
-# Relations HasMany/BelongsTo dans Laravel 12 : Matérialiser une relation entre modèles
+# Relations HasMany/BelongsTo : Matérialiser une relation entre modèles
 
 Bienvenue dans ce septième épisode de notre série sur **Laravel 12** ! 🚀 Aujourd'hui, nous allons apprendre à concrétiser une relation entre modèles avec notre première relation **HasMany/BelongsTo**.
 

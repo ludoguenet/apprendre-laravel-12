@@ -1,15 +1,15 @@
 ---
-title: "Relations BelongsToMany dans Laravel 12"
+title: "Relations BelongsToMany"
 order: 8
 slug: relationships-belongstomany
-description: "Découvrez comment implémenter et utiliser les relations BelongsToMany (Many-to-Many) dans Laravel 12 pour créer des relations complexes entre vos modèles."
+description: "Découvrez comment implémenter et utiliser les relations BelongsToMany (Many-to-Many) pour créer des relations complexes entre vos modèles."
 date: "2025-05-24"
 duration: "22:27"
 youtubeId: "1r_fXBDf6V0"
 repository: "https://github.com/ludoguenet/l12/tree/feat/relationships-belongstomany"
 thumbnail: "/images/relationships-belongstomany.png"
 level: "intermédiaire"
-isNew: true
+isNew: false
 tags:
     - eloquent
     - relationships
@@ -28,7 +28,7 @@ links:
     url: https://github.com/ludoguenet/l12/tree/feat/relationships-belongstomany
 ---
 
-# Relations BelongsToMany dans Laravel 12 : Créer des relations complexes
+# Relations BelongsToMany : Créer des relations complexes
 
 Bienvenue dans ce huitième épisode de notre série sur **Laravel 12** ! 🚀 Aujourd'hui, nous allons explorer les relations BelongsToMany (Many-to-Many), une relation essentielle pour créer des liens complexes entre vos modèles.
 

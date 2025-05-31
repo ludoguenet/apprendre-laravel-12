@@ -1,5 +1,5 @@
 ---
-title: "Eloquent dans Laravel 12"
+title: "Eloquent"
 order: 6
 slug: eloquent
 description: "Découvrez comment utiliser Eloquent, l'ORM de Laravel, pour interagir avec votre base de données de manière élégante et efficace."
@@ -26,7 +26,7 @@ links:
     url: https://github.com/ludoguenet/l12/tree/feat/eloquent
 ---
 
-# Eloquent dans Laravel 12 : L'ORM qui simplifie votre vie
+# Eloquent : L'ORM qui simplifie votre vie
 
 Bienvenue dans ce sixième épisode de notre série sur **Laravel 12** ! 🚀 Aujourd'hui, nous allons explorer **Eloquent**, l'ORM (Object-Relational Mapping) de Laravel qui va révolutionner votre façon d'interagir avec la base de données.
 

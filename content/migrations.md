@@ -1,5 +1,5 @@
 ---
-title: "Les migrations dans Laravel 12"
+title: "Les migrations"
 order: 5
 slug: migrations
 description: "Découvrez comment créer et gérer vos tables de base de données avec les migrations Laravel 12, une approche structurée et versionnée pour votre schéma de données."
@@ -26,7 +26,7 @@ links:
     url: https://github.com/ludoguenet/l12/tree/feat/migrations
 ---
 
-# Les migrations dans Laravel 12 : Gérer votre schéma de base de données
+# Les migrations : Gérer votre schéma de base de données
 
 Bienvenue dans ce cinquième épisode de notre série sur **Laravel 12** ! 🚀 Aujourd'hui, nous allons explorer les **migrations**, un outil puissant pour gérer vos tables et schémas de base de données.
 

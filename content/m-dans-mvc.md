@@ -2,7 +2,7 @@
 title: "Le M dans MVC"
 order: 4
 slug: m-dans-mvc
-description: "Découvrez comment créer et utiliser des modèles dans Laravel 12 pour gérer la logique métier et encapsuler l'accès aux données de votre application."
+description: "Découvrez comment créer et utiliser des modèles pour gérer la logique métier et encapsuler l'accès aux données de votre application."
 date: "2025-04-06"
 duration: "14:07"
 youtubeId: "OcpGHKwbhE0"
@@ -26,7 +26,7 @@ links:
     url: https://discord.gg/invite/cuFxTjH
 ---
 
-# Les modèles dans Laravel 12 : Premières étapes
+# Les modèles : Premières étapes
 
 Bienvenue dans ce quatrième épisode de notre série sur **Laravel 12** ! 🚀 Aujourd'hui, nous allons découvrir les **modèles** et comprendre comment ils s'intègrent dans l'architecture MVC de Laravel.
 

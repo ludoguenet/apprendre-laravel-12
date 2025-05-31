@@ -2,7 +2,7 @@
 title: "Les vues avec Blade et TailwindCSS"
 order: 2
 slug: vues-blade-tailwindcss
-description: "Découvrez comment utiliser le moteur de template Blade et créer des layouts réutilisables dans Laravel 12. L'ajout de style sera fait avec TailwindCSS."
+description: "Découvrez comment utiliser le moteur de template Blade et créer des layouts réutilisables. L'ajout de style sera fait avec TailwindCSS."
 date: "2025-03-22"
 duration: "28:42"
 youtubeId: "GRKIX8SZ7KQ"
@@ -260,6 +260,6 @@ Ces techniques vous permettront de créer des interfaces utilisateur plus mainte
 
 ## Prochaine vidéo
 
-Dans la prochaine vidéo, nous verrons comment travailler avec les formulaires et les requêtes dans Laravel 12.
+Dans la prochaine vidéo, nous verrons comment travailler avec les formulaires et les requêtes.
 
 N'oubliez pas de liker la vidéo et de vous abonner pour ne pas manquer les prochains épisodes ! 👍
