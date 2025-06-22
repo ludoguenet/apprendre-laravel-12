@@ -9,7 +9,7 @@ youtubeId: "dNPRRlSJMYE"
 repository: "https://github.com/ludoguenet/l12/tree/feat/factory"
 thumbnail: "/images/factory.png"
 level: "intermédiaire"
-isNew: true
+isNew: false
 tags:
     - factory
     - eloquent
